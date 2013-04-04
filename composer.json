@@ -1,0 +1,40 @@
+{
+    "name": "kapitchi/kap-angular-theme",
+    "description": "ZF2 angular-theme module",
+    "keywords": [
+        "kapitchi",
+        "zf2",
+        "user",
+        "authentication",
+        "registration"
+    ],
+    "homepage": "http://kapitchi.com",
+    "authors": [
+        {
+            "name": "Matus Zeman",
+            "email": "mz@kapitchi.com",
+            "homepage": "http://kapitchi.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "dev@kapitchi.com"
+    },
+    "minimum-stability": "dev",
+    "suggest": {
+    },
+    
+    "require": {
+        "php": ">=5.3.3",
+        "kapitchi/base": "dev-master",
+        "kapitchi/entity": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "KapGallery": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
