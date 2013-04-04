@@ -31,7 +31,7 @@
     },
     "autoload": {
         "psr-0": {
-            "KapGallery": "src/"
+            "KapAngularTheme": "src/"
         },
         "classmap": [
             "./Module.php"
