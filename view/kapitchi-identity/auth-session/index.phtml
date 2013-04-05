@@ -1,0 +1,13 @@
+<div>
+Hey, in this session you are logged in as <?=$this->authIdentity()->getDisplayName()?>
+</div>
+<div>
+    You can switch to:
+    <ul>
+    <?php foreach($this->authIdentities as $authIdentity):
+        $identity = $this->identity()->find($authIdentity->getId());
+        ?>
+        <li><a ng-click="setSession(<?=$authIdentity->getSessionId()?>)" target="_self" href="<?=$this->url('identity/auth-session/switch', array('sessionId' => $authIdentity->getSessionId()))?>"><?=$identity->getDisplayName()?></li>
+    <?php endforeach?>
+    </ul>
+</div>
