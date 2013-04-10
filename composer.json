@@ -1,5 +1,6 @@
 {
     "name": "kapitchi/kap-angular-theme",
+    "license": "LGPL-3.0",
     "description": "ZF2 angular-theme module",
     "keywords": [
         "kapitchi",
