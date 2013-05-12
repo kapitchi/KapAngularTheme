@@ -1,5 +1,7 @@
 <?php
 
+$breadcrumbsHtml = $this->navigation('DefaultNavigation')->breadcrumbs()->render();
+
 $this->headTitle('Kapitchi Showcase')->setSeparator(' / ');
 
 //page action
@@ -43,6 +45,8 @@ $this->plugin('HeadLink')->appendStylesheet($this->basePath('/assets/css/ng-grid
 
 $this->plugin('InlineScript')->appendFile($this->basePath('/assets/js/KapApp.js'));
 $this->plugin('HeadLink')->appendStylesheet($this->basePath('/assets/css/kap-angular-theme.css'));
+
+$this->plugin('InlineScript')->appendFile($this->basePath('/assets/js/Test.js'));
 
 echo $this->plugin('doctype')->setDoctype(\Zend\View\Helper\Doctype::HTML5);
 ?>
@@ -92,6 +96,9 @@ echo $this->plugin('doctype')->setDoctype(\Zend\View\Helper\Doctype::HTML5);
         </div>
         <div id="main_container" class="container">
             <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+            <div class="breadcrumbs">
+                <?=$breadcrumbsHtml?>
+            </div>
             <div ui-view>
                 Loading ...
             </div>
